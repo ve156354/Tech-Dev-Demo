@@ -13,7 +13,7 @@ public class Application {
 	public String home() {
 
 		
-		return "Hai Openshift....from POD IP is: "+getPodIP();
+		return "Hai Openshift....POD IP is: "+getPodIP();
 	}
 	
 	public static String getPodIP(){
