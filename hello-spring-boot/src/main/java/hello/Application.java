@@ -23,7 +23,7 @@ public class Application {
 	@RequestMapping("/")
 	public String home() {
 
-		return "Hello Openshift....POD IP is: " + getPodIP() + "  Version: 2";
+		return "Hello Openshift....POD IP is: " + getPodIP() + "  Version: 1";
 	}
 
 	@RequestMapping(value = "/process", method = RequestMethod.GET)
