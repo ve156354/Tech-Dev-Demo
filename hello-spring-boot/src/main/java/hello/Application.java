@@ -26,7 +26,7 @@ public class Application {
 		return "Hello Openshift....POD IP is: " + getPodIP() + "  Version: 1.0"; 
 	}
 
-	@RequestMapping(value = "/process", method = RequestMethod.GET)
+	@RequestMapping(value = "/hai", method = RequestMethod.GET)
 	@ResponseBody
 	public String send(final HttpServletRequest request) throws Exception {
 
