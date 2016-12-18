@@ -17,7 +17,7 @@ public class Application {
 	}
 	
 	public static String getPodIP(){
-		String ip = "";
+		String ip = "0.0.0.0";
 		try {
 			
 			ip = java.net.InetAddress.getLocalHost().getHostAddress();

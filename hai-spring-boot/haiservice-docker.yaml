@@ -1,0 +1,123 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: null
+    labels:
+      app: haiservice
+    name: haiservice
+  spec: {}
+  status:
+    dockerImageRepository: ""
+- apiVersion: v1
+  kind: BuildConfig
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: null
+    labels:
+      app: haiservice
+    name: haiservice
+  spec:
+    output:
+      to:
+        kind: ImageStreamTag
+        name: haiservice:latest
+    postCommit: {}
+    resources: {}
+    source:
+      contextDir: hai-spring-boot
+      git:
+        uri: https://github.com/ve156354/Tech-Dev-Demo
+      secrets: []
+      type: Git
+    strategy:
+      dockerStrategy:
+        from:
+          kind: DockerImage
+          name: artmgt01.atpco.org:9091/atpco-jdk-1.8.0.45:1.0
+        pullSecret:
+          name: nexussecret
+      type: Docker
+    triggers:
+    - github:
+        secret: pYImQSTqiYbQrllhyRuH
+      type: GitHub
+    - generic:
+        secret: mHbozdqWbnOWQ_N1_Beh
+      type: Generic
+    - type: ConfigChange
+    - imageChange: {}
+      type: ImageChange
+  status:
+    lastVersion: 0
+- apiVersion: v1
+  kind: DeploymentConfig
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: null
+    labels:
+      app: haiservice
+    name: haiservice
+  spec:
+    replicas: 1
+    selector:
+      app: haiservice
+      deploymentconfig: haiservice
+    strategy:
+      resources: {}
+    template:
+      metadata:
+        annotations:
+          openshift.io/container.haiservice.image.entrypoint: '["/bin/bash"]'
+          openshift.io/generated-by: OpenShiftNewApp
+        creationTimestamp: null
+        labels:
+          app: haiservice
+          deploymentconfig: haiservice
+      spec:
+        containers:
+        - image: haiservice:latest
+          name: haiservice
+          ports:
+          - containerPort: 8080
+            protocol: TCP
+          resources: {}
+    test: false
+    triggers:
+    - type: ConfigChange
+    - imageChangeParams:
+        automatic: true
+        containerNames:
+        - haiservice
+        from:
+          kind: ImageStreamTag
+          name: haiservice:latest
+      type: ImageChange
+  status: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: null
+    labels:
+      app: haiservice
+    name: haiservice
+  spec:
+    ports:
+    - name: 8080-tcp
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: haiservice
+      deploymentconfig: haiservice
+  status:
+    loadBalancer: {}
+kind: List
+metadata: {}
