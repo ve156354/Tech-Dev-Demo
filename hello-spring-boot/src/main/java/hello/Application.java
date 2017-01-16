@@ -30,8 +30,8 @@ public class Application {
 	@ResponseBody
 	public String send(final HttpServletRequest request) throws Exception {
 
-		String url = "http://" + env.getProperty("HAI_SERVICE_HOST") + ":" + env.getProperty("HAI_SERVICE_PORT");
-
+		//String url = "http://" + env.getProperty("HAI_SERVICE_HOST") + ":" + env.getProperty("HAI_SERVICE_PORT");
+		String url = "http://hai-sample-project.rhel-cdk.10.1.2.2.xip.io/" ;
 		ResponseEntity<String> response = new RestTemplate().getForEntity(url, String.class);
 
 		System.out.println("Response is..." + response.getBody());
