@@ -36,7 +36,7 @@ public class Application {
 		  
 		String url = env.getProperty("hai.service.url");
 		
-		System.out.println("url is..." +url);
+		System.out.println("calling url..." +url);
 		
 		ResponseEntity<String> response = new RestTemplate().getForEntity(url, String.class);
 

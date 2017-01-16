@@ -1,3 +1,0 @@
-server:
-  port: 8080
-hai-service: http://hai.sample-project.svc.cluster.local:8080
