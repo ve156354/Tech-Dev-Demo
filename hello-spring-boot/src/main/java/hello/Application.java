@@ -32,7 +32,12 @@ public class Application {
 
 		//String url = "http://" + env.getProperty("HAI_SERVICE_HOST") + ":" + env.getProperty("HAI_SERVICE_PORT");
 		//String url = "http://hai-sample-project.rhel-cdk.10.1.2.2.xip.io/" ;
-		String url = "http://hai.sample-project.svc.cluster.local:8080";
+		//String url = "http://hai.sample-project.svc.cluster.local:8080";
+		  
+		String url = env.getProperty("hai-service");
+		
+		System.out.println("url is..." +url);
+		
 		ResponseEntity<String> response = new RestTemplate().getForEntity(url, String.class);
 
 		System.out.println("Response is..." + response.getBody());
