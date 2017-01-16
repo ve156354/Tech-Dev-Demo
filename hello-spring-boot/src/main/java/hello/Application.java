@@ -34,7 +34,7 @@ public class Application {
 		//String url = "http://hai-sample-project.rhel-cdk.10.1.2.2.xip.io/" ;
 		//String url = "http://hai.sample-project.svc.cluster.local:8080";
 		  
-		String url = env.getProperty("hai-service");
+		String url = env.getProperty("hai.service.url");
 		
 		System.out.println("url is..." +url);
 		
