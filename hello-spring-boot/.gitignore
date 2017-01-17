@@ -1,7 +1,4 @@
 /target/
-hello-spring-boot/.classpath
-hello-spring-boot/.gitignore
-hello-spring-boot/.project
-hello-spring-boot/.settings/org.eclipse.core.resources.prefs
-hello-spring-boot/.settings/org.eclipse.jdt.core.prefs
-hello-spring-boot/.settings/org.eclipse.m2e.core.prefs
+*.classpath
+*.project
+*.settings/

@@ -1,7 +1,6 @@
 /target/
-hai-spring-boot/.classpath
-hai-spring-boot/.gitignore
-hai-spring-boot/.project
-hai-spring-boot/.settings/org.eclipse.core.resources.prefs
-hai-spring-boot/.settings/org.eclipse.jdt.core.prefs
-hai-spring-boot/.settings/org.eclipse.m2e.core.prefs
+*.classpath
+*.project
+*.settings/
+
+
