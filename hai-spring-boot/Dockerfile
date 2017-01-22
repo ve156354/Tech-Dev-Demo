@@ -1,4 +1,4 @@
-FROM  docker.io/library/java
+FROM  artmgt01.atpco.org:9091/atpco-jdk-1.8.0.45:1.0
 
 #FROM springboot:1.0
 
