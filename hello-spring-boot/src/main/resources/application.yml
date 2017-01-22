@@ -1,6 +1,2 @@
-server:
-  port: 8080
-  
-hai.service.url: http://hai.sample-project.svc.cluster.local:8080
-
-#hai.service.url: http://localhost:8082/
+server.port: 8080
+hai.service.url: http://haiservice.sample-project.svc.cluster.local:8080
