@@ -1,4 +1,4 @@
-FROM library/java
+FROM  docker.io/library/java
 
 #FROM springboot:1.0
 
