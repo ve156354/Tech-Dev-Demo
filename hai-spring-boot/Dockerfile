@@ -1,6 +1,6 @@
-#FROM java:8
+FROM library/java
 
-FROM springboot:1.0
+#FROM springboot:1.0
 
 USER 1001
 
