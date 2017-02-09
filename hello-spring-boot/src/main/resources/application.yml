@@ -1,2 +1,2 @@
 server.port: 8080
-hai.service.url: http://hai-spring-boot-apm-sample-project.svc.cluster.local:8080
+hai.service.url: http://hai-spring-boot-apm.sample-project.svc.cluster.local:8080
