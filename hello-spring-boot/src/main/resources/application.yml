@@ -1,2 +1,15 @@
 server.port: 8080
 hai.service.url: http://hai-spring-boot-apm.sample-project.svc.cluster.local:8080
+
+spring:
+  application:
+    name: @pom.artifactId@-DEV
+  boot:
+    admin:
+      url: http://adminserver.training.svc.cluster.local:8080
+      client:
+        service-url: http://hello.training.svc.cluster.local:8080
+
+info:
+  version: @pom.version@
+  stage: test
