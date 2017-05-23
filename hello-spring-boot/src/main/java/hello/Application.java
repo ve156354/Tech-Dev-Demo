@@ -25,7 +25,7 @@ public class Application {
 		
 		String myproperty  = env.getProperty("myenv");
 		
-		return "Hello Openshift....POD IP is: " + getPodIP() + "  Version: 2.0 from:  "+ myproperty ;
+		return "Hello Openshift....POD IP is: " + getPodIP() + "  Version: 1.0 from:  "+ myproperty ;
 	}
 
 	@RequestMapping(value = "/hai", method = RequestMethod.GET)
