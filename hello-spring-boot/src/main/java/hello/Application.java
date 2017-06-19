@@ -31,6 +31,18 @@ public class Application {
 		
 		
 	}
+	
+	@RequestMapping("/route2")
+	public String home() {
+		
+		String myproperty  = env.getProperty("myenv");
+		
+		//return "Hello Openshift....POD IP is: " + getPodIP();
+		
+		return "Hello Openshift from route2....POD IP is: " + getPodIP() + "  Version: 1.0 " ;
+		
+		
+	}
 
 	@RequestMapping(value = "/hai", method = RequestMethod.GET)
 	@ResponseBody
