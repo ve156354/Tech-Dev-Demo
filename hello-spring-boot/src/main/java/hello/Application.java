@@ -33,7 +33,7 @@ public class Application {
 	}
 	
 	@RequestMapping("/route2")
-	public String home() {
+	public String toRoute() {
 		
 		String myproperty  = env.getProperty("myenv");
 		
