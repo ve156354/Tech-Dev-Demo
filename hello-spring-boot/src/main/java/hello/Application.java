@@ -27,7 +27,7 @@ public class Application {
 		
 		//return "Hello Openshift....POD IP is: " + getPodIP();
 		
-		return "Hello Openshift....POD IP is: " + getPodIP() + "  Version: 1.1 " ;
+		return "Hello Openshift....POD IP is: " + getPodIP() + "  Version: 2.0 " ;
 		
 		
 	}
