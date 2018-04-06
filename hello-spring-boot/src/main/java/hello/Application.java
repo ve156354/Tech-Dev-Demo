@@ -19,10 +19,12 @@ public class Application {
 
 	@Autowired
 	private Environment env;
-
+    
+	/* my comment */
+	
 	@RequestMapping("/")
 	public String home() {
-
+    
 		return "Hello Openshift....POD IP is: " + getPodIP() + "  Version: 1.0"; 
 	}
 
