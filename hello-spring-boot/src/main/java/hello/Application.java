@@ -20,18 +20,11 @@ public class Application {
 	@Autowired
 	private Environment env;
     
-	/* my commentttttttt */
+	/* my commentttttttt f1 */
 	
 	@RequestMapping("/")
 	public String home() {
-<<<<<<< HEAD
 
-	    /*
-		     Test
-		*/
-=======
-    
->>>>>>> feature/feature-1
 		return "Hello Openshift....POD IP is: " + getPodIP() + "  Version: 1.0"; 
 	}
 
