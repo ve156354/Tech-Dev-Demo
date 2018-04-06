@@ -23,6 +23,9 @@ public class Application {
 	@RequestMapping("/")
 	public String home() {
 
+	    /*
+		     Test
+		*/
 		return "Hello Openshift....POD IP is: " + getPodIP() + "  Version: 1.0"; 
 	}
 
