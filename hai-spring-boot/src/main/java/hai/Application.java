@@ -12,7 +12,7 @@ public class Application {
 	@RequestMapping("/")
 	public String home() {
 
-		
+		System.out.println("test my feature 1");
 		return "Hai Openshift....POD IP is: "+getPodIP()  + ":  V1.0" ;
 	}
 	
