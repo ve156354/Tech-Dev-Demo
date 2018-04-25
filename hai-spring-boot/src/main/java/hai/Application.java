@@ -12,8 +12,8 @@ public class Application {
 	@RequestMapping("/")
 	public String home() {
 
-		
-		return "Hai Openshift....POD IP is: "+getPodIP()  + ":  Version:B" ;
+		System.out.println("test my feature 1 changed");
+		return "Hai Openshift....POD IP is: "+getPodIP()  + ":  V1.0" ;
 	}
 	
 	public static String getPodIP(){

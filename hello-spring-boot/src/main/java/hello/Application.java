@@ -20,16 +20,25 @@ public class Application {
 	@Autowired
 	private Environment env;
 
+
+
 	@RequestMapping("/")
 	public String home() {
 		
 		String myproperty  = env.getProperty("myenv");
 		
-		return "Hello Openshift....POD IP is: " + getPodIP();
 		
 		//return "Hello Openshift....POD IP is: " + getPodIP() + "  Version: 1.0 " ;
 		
 		
+
+	    /*
+		     Test122222
+		*/
+
+
+
+		return "Hello Openshift....POD IP is: " + getPodIP() + "  Version: 1.0";
 	}
 	
 	@RequestMapping("/route2")
