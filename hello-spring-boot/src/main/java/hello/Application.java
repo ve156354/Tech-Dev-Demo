@@ -1,7 +1,7 @@
 package hello;
 
 import javax.servlet.http.HttpServletRequest;
-
+import java.util.Vector;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,20 +25,14 @@ public class Application {
 	@RequestMapping("/")
 	public String home() {
 		
-		String myproperty  = env.getProperty("myenv");
+	        Vector v = new Vector();
+		for (int i = 0; i < 10; i++)
+		{
+		  byte[] b = new byte[1048576];
+		  v.add(b);
+		}
 		
-		
-		//return "Hello Openshift....POD IP is: " + getPodIP() + "  Version: 1.0 " ;
-		
-		
-
-	    /*
-		     Test122222
-		*/
-
-
-
-		return "Hello Openshift....POD IP is: " + getPodIP() + "  Version: 1.0";
+		return "Hello Openshift....Container IP is: " + getPodIP() + "  Version: 1.0";
 	}
 	
 	@RequestMapping("/route2")
